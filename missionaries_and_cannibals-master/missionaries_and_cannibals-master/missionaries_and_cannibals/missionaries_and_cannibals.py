@@ -1,5 +1,6 @@
 from search import Problem
-from .state import State
+from state import State
+import copy
 
 class MissionariesAndCannibals(Problem) :
     def __init__(self, initial, goal):
@@ -31,7 +32,8 @@ class MissionariesAndCannibals(Problem) :
         return state.move()
 
     def getValidAction(self, state, allActions) :
-        pass
+        state = ()
+        state = copy.deepcopy(self.initial)
     
     def goal_test(self, state) :
         return state == self.goal
